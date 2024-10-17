@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SALDOC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+      .active-tab {
+        font-weight: bold;
+        border-bottom-color: white;
+      }
+      .inactive-tab {
+        border-bottom-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-gray-900 z-50">
+      <nav
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <div class="text-3xl font-bold text-yellow-500">SalDoc</div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#intro" class="text-white">Intro</a>
+          <a href="#product-faq" class="text-white">Product Details</a>
+          <a href="#faq" class="text-white">FAQ</a>
+          <a href="#about-contact" class="text-white">About & Contact</a>
+        </div>
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button
+          id="hamburger"
+          class="md:hidden text-yellow-500 focus:outline-none"
+        >
+          <svg
+            class="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div id="mobileMenu" class="md:hidden hidden bg-gray-800">
+        <a href="#intro" class="block text-white px-4 py-2">Intro</a>
+        <a href="#product-faq" class="block text-white px-4 py-2"
+          >Product Details</a
+        >
+        <a href="#product-faq" class="block text-white px-4 py-2">FAQ</a>
+        <a href="#about-contact" class="block text-white px-4 py-2"
+          >About & Contact</a
+        >
+      </div>
+    </header>
+
+    <!-- Intro Section with Background Image -->
+    <section
+      id="intro"
+      class="min-h-screen flex items-center justify-center bg-gray-900 text-white bg-cover bg-center"
+      style="background-image: url('./image/intro-bg.jpg')"
+    >
+      <div class="text-center bg-gray-900 bg-opacity-50 p-8 rounded-lg">
+        <h1 class="text-4xl font-bold mb-4 text-yellow-400">
+          Transform Spending into Earnings
+        </h1>
+        <p class="mb-6 text-white">
+          Enjoy Cashback on Every Service You Choose!
+        </p>
+        <!-- Join Button -->
+        <a
+          href="#"
+          class="bg-blue-500 text-white py-2 px-6 rounded-full bg-gray-800 hover:bg-gray-900 hover:bg-blue-600 transition-all"
+          >Join</a
+        >
+
+        <!-- Login Button (add the link to the login page) -->
+        <a
+          href="login.html"
+          class="ml-4 border border-white text-white py-2 px-6 rounded-full bg-yellow-500 hover:bg-yellow-600 hover:bg-white hover:text-black transition-all"
+          >Login</a
+        >
+      </div>
+    </section>
+
+    <!-- Tabbed Content: Product Details and FAQ -->
+    <section id="product-faq" class="mx-auto py-16 px-6 bg-gray-200 text-black">
+      <div class="mb-6">
+        <button
+          id="productTab"
+          class="text-lg py-2 px-4 border-b-4 hover:border-white active-tab"
+        >
+          Product Details
+        </button>
+        <span class="mx-2 border-r-4 border-gray-700"></span>
+        <button
+          id="faqTab"
+          class="text-lg py-2 px-4 border-b-4 hover:border-white inactive-tab"
+        >
+          FAQ
+        </button>
+      </div>
+      <!-- Product Details Section -->
+      <div id="productDetails" class="space-y-4">
+        <h2 class="text-3xl font-bold">Product Details</h2>
+        <p>
+          Welcome to SalDoc, where every transaction becomes an opportunity to
+          save! Our platform offers cashback on all services you choose,
+          including utility bills and online subscriptions.
+        </p>
+        <p>
+          Explore our curated selection of services, make your purchase, and
+          watch your savings grow. The more you engage, the more you earn.
+        </p>
+
+        <p>
+          At SalDoc, we believe in transforming everyday spending into rewarding
+          experiences. As you avail yourself of essential services, our platform
+          empowers you to earn cashback effortlessly. Whether it's managing your
+          utilities, securing the latest digital subscriptions, or indulging in
+          premium services, our platform is your gateway to a world of savings.
+        </p>
+
+        <p>
+          Here's how it works: Simply explore our curated selection of services,
+          make your desired purchase, and watch your savings grow with every
+          transaction. We prioritize transparency, ensuring that you are
+          informed about your cashback rewards at every step. The more you
+          engage with our platform, the more you earn – it's that simple.
+        </p>
+
+        <p>
+          Join us and elevate your lifestyle with a unique fusion of essential
+          services and unmatched cashback rewards. Embrace a new era of savvy
+          spending, where every service you enjoy is an opportunity to bolster
+          your savings. Experience the synergy of convenience, value, and
+          cashback – exclusively at SalDoc.
+        </p>
+      </div>
+      <!-- FAQ Section (Hidden by Default) -->
+      <div id="faqSection" class="hidden space-y-4">
+        <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+        <p>
+          <strong>How do I earn cashback?</strong> You can earn cashback on
+          every service you use through our platform, including utility bills,
+          digital subscriptions, and more.
+        </p>
+        <p>
+          <strong>How can I join?</strong> Simply click on the "Join" button,
+          sign up, and start enjoying cashback rewards immediately.
+        </p>
+      </div>
+    </section>
+
+    <!-- About & Contact Section -->
+    <section
+      id="about-contact"
+      class="mx-auto py-16 px-6 bg-gray-900 text-white"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- About Us Column -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">About Us</h2>
+          <p>
+            At SalDoc, we aim to redefine the way you experience essential
+            services. Our platform empowers you to manage your utilities,
+            subscriptions, and premium services while earning cashback rewards.
+          </p>
+          <p>
+            We believe in providing a seamless, transparent, and rewarding
+            experience for all our users.
+          </p>
+        </div>
+        <!-- Contact Info Column -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Contact Info</h2>
+          <p><strong>Email:</strong> support@SalDoc.com</p>
+          <p><strong>Phone:</strong> +123 456 7890</p>
+          <p>
+            <strong>Address:</strong> 123 SalDoc Street, Cashback City, LO 12345
+          </p>
+        </div>
+        <!-- Contact Form Column -->
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label for="name" class="block text-sm mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full px-3 py-2 bg-gray-800 border border-gray-600 text-white rounded"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-3 py-2 bg-gray-800 border border-gray-600 text-white rounded"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="company" class="block text-sm mb-2"
+                >Company Name</label
+              >
+              <input
+                type="text"
+                id="company"
+                name="company"
+                class="w-full px-3 py-2 bg-gray-800 border border-gray-600 text-white rounded"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-sm mb-2">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="w-full px-3 py-2 bg-gray-800 border border-gray-600 text-white rounded"
+                rows="4"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 py-6">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 SalDoc. All rights reserved.</p>
+        <div class="space-x-4 mt-4">
+          <a href="#" class="text-white hover:text-yellow-500"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-white hover:text-yellow-500"
+            >Terms of Service</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

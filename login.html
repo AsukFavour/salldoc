@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Wrapper -->
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
+      
+      <!-- Tab Navigation -->
+      <div class="flex justify-center mb-6">
+        <button id="loginTab" class="text-lg py-2 px-4 border-b-2 border-yellow-500 font-bold">Login</button>
+        <button id="signupTab" class="text-lg py-2 px-4 border-b-2 border-transparent hover:border-yellow-500">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+        <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
+        <div class="mb-4">
+          <label for="email" class="block mb-2 text-sm">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm">Password</label>
+          <input type="password" id="password" name="password" class="w-full p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="w-full py-3 bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg font-bold">Login</button>
+        <p class="mt-4 text-sm text-center">Don't have an account? <button id="switchToSignup" class="text-yellow-500 hover:underline">Sign Up</button></p>
+      </form>
+
+      <!-- Sign Up Form (Hidden initially) -->
+      <form id="signupForm" class="hidden">
+        <h2 class="text-3xl font-bold mb-6 text-center">Sign Up</h2>
+        <div class="mb-4">
+          <label for="name" class="block mb-2 text-sm">Name</label>
+          <input type="text" id="name" name="name" class="w-full p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-4">
+          <label for="emailSignup" class="block mb-2 text-sm">Email</label>
+          <input type="email" id="emailSignup" name="emailSignup" class="w-full p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-4">
+          <label for="passwordSignup" class="block mb-2 text-sm">Password</label>
+          <input type="password" id="passwordSignup" name="passwordSignup" class="w-full p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Enter your password" required>
+        </div>
+        <div class="mb-6">
+          <label for="confirmPassword" class="block mb-2 text-sm">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="w-full p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="w-full py-3 bg-yellow-500 hover:bg-yellow-600 text-black rounded-lg font-bold">Sign Up</button>
+        <p class="mt-4 text-sm text-center">Already have an account? <button id="switchToLogin" class="text-yellow-500 hover:underline">Login</button></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="./script/login.js">
+    
+  </script>
+</body>
+</html>
