@@ -408,7 +408,111 @@
                             </div>
                         </div>
 
+                
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Add Funds Modal -->
+        <div class="modal fade" id="addFundsModal" tabindex="-1" role="dialog" aria-labelledby="addFundsModalLabel" aria-hidden="true"  data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addFundsModalLabel">Add Funds</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+                            </div>
+                            <div class="form-group">
+                                <label for="bank">Select Bank</label>
+                                <select class="form-control" id="bank">
+                                    <option>United Bank of Africa</option>
+                                    <option>Access Bank</option>
+                                    <option>Zenith Bank</option>
+                                    <option>CitiBank</option>
+                                    <option>GTBank</option>
+                                    <option>Fidelity Bank</option>
+                                    <option>Kuda Bank</option>
+                                    <option>Opay</option>
+                                    <option>PalmPay</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" class="form-control" id="accountNumber" placeholder="Enter your account number">
+                            </div>
+                            <div class="form-group">
+                                <label for="paymentMethod">Payment Method</label>
+                                <select class="form-control" id="paymentMethod">
+                                    <option>Debit Card</option>
+                                    <option>Credit Card</option>
+                                    <option>Bank Transfer</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Add Funds</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Withdraw Funds Modal -->
+        <div class="modal fade" id="withdrawFundsModal" tabindex="-1" role="dialog" aria-labelledby="withdrawFundsModalLabel" aria-hidden="true"  data-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="withdrawFundsModalLabel">Withdraw Funds</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="withdrawAmount">Amount</label>
+                                <input type="number" class="form-control" id="withdrawAmount" placeholder="Enter amount">
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawBank">Select Bank</label>
+                                <select class="form-control" id="withdrawBank">
+                                    <option>United Bank of Africa</option>
+                                    <option>Access Bank</option>
+                                    <option>Zenith Bank</option>
+                                    <option>CitiBank</option>
+                                    <option>GTBank</option>
+                                    <option>Fidelity Bank</option>
+                                    <option>Kuda Bank</option>
+                                    <option>Opay</option>
+                                    <option>PalmPay</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawAccountNumber">Account Number</label>
+                                <input type="text" class="form-control" id="withdrawAccountNumber" placeholder="Enter your account number">
+                            </div>
+                            <div class="form-group">
+                                <label for="withdrawMethod">Withdrawal Method</label>
+                                <select class="form-control" id="withdrawMethod">
+                                    <option>Bank Transfer</option>
+                                    <option>PayPal</option>
+                                    <option>Wire Transfer</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Withdraw Funds</button>
                     </div>
                 </div>
             </div>
