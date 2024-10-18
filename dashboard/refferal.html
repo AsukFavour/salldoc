@@ -317,52 +317,47 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <!-- Filter Section -->
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="transactionType">Transaction Type</label>
-                                    <select class="form-control" id="transactionType">
-                                        <option value="all">All Transactions</option>
-                                        <option value="deposit">Deposits</option>
-                                        <option value="withdrawal">Withdrawals</option>
-                                        <option value="spending">Spending</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="dateFilter">Date</label>
-                                    <input type="date" class="form-control" id="dateFilter" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Transaction Table Section -->
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Date</th>
-                                                <th>Transaction Type</th>
-                                                <th>Amount</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="transactionTableBody">
-                                            <!-- Display transactions here or show "No transactions made yet" -->
-                                            <tr>
-                                                <td colspan="5" class="text-center">No transactions made yet</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h2 class="card-title">Referral Program</h2>
+                                        <p class="card-text">Invite your friends to join SalDoc and earn rewards! Share your referral link with them, and for every successful referral, you'll earn points that can be converted into discounts or cashback.</p>
+
+                                        <!-- Referral Link -->
+                                        <div class="form-group">
+                                            <label for="referralLink">Your Referral Link</label>
+                                            <input type="text" class="form-control" id="referralLink" value="https://saldoc.com/referral?code=YOURCODE123" readonly />
+                                        </div>
+
+                                        <!-- Share Button -->
+                                        <div class="form-group">
+                                            <button class="btn btn-primary" id="shareBtn"><i class="fa fa-share"></i> Share Your Referral Link</button>
+                                        </div>
+
+                                        <!-- Referral Details -->
+                                        <div class="mt-4">
+                                            <h4>How the Referral Program Works:</h4>
+                                            <ul>
+                                                <li>Share your unique referral link with friends and family.</li>
+                                                <li>For every friend who signs up using your link, you’ll earn 10% of their first transaction.</li>
+                                                <li>Your friend also gets 5% off their first transaction when they sign up with your link.</li>
+                                            </ul>
+
+                                            <h4>Terms and Conditions:</h4>
+                                            <ul>
+                                                <li>The referral program is only applicable for new users.</li>
+                                                <li>Referral rewards will be credited after the referred user completes their first transaction.</li>
+                                                <li>You can refer an unlimited number of friends and earn rewards on all successful referrals.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
                 </div>
             </div>
                 </div>
@@ -398,6 +393,23 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+    <!-- Share button functionality -->
+    <script>
+        document.getElementById('shareBtn').addEventListener('click', function() {
+            const referralLink = document.getElementById('referralLink').value;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Join SalDoc!',
+                    text: 'Sign up and enjoy amazing deals. Use my referral link: ',
+                    url: referralLink
+                })
+            } else {
+                alert('Share functionality is not supported in your browser. Please copy the link and share it manually.');
+            }
+        });
+    </script>
 
 </body>
 
